@@ -17,10 +17,12 @@ function setViewPortsAndUserAgent(device) {
     throw new Error('device not supported - [please set device to mob or web]')
 }
 module.exports = (on, config) => {
-    console.log(`-- Device from config: ${config.env.device}`); // Debugging line
-    const viewportConfig = setViewPortsAndUserAgent(config.env.device)
+    const device = config.env.CYPRESS_DEVICE || 'web'; // Fallback to 'web'
+    console.log(` -- Device from config: ${device}`); // Should output 'mob' or 'web'
+    const viewportConfig = setViewPortsAndUserAgent(device);
 
-    config = Object.assign({}, viewportConfig)
+    // Merge the viewportConfig with the existing config
+    config = { ...config, ...viewportConfig };
 
-    return config
-}
+    return config;
+};
