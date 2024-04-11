@@ -17,6 +17,7 @@ function setViewPortsAndUserAgent(device) {
     throw new Error('device not supported - [please set device to mob or web]')
 }
 module.exports = (on, config) => {
+    console.log(`-- Device from config: ${config.env.device}`); // Debugging line
     const viewportConfig = setViewPortsAndUserAgent(config.env.device)
 
     config = Object.assign({}, viewportConfig)
