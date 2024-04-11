@@ -19,6 +19,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Dependencies
         run: npm install
+      - name: Print environment variables
+        run: |
+          echo "Device: $device"
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
@@ -29,5 +32,4 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CYPRESS_DEVICE: ${{ matrix.device }}
           device: ${{ matrix.device }}
