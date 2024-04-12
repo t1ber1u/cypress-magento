@@ -17,8 +17,8 @@ function setViewPortsAndUserAgent(device) {
     throw new Error('device not supported - [please set device to mob or web]')
 }
 module.exports = (on, config) => {
-    const device = config.env.CYPRESS_DEVICE || 'web'; // Fallback to 'web'
-    console.log(` -- Device from config: ${device}`); // Should output 'mob' or 'web'
+    const device = config.env.DEVICE 
+    console.log(`Device from environment:: ${device}`); // Should output 'mob' or 'web'
     const viewportConfig = setViewPortsAndUserAgent(device);
 
     // Merge the viewportConfig with the existing config

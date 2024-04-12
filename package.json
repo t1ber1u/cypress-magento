@@ -8,6 +8,7 @@
     "cy:run:mob": "cypress run --browser=chrome --env device=mob",
     "cy:run:web": "cypress run --env device=web",
     "cy:run:web:record": "CYPRESS_DEVICE=web cypress run --record --browser chrome --headless",
+    "cy:run:mob:record": "CYPRESS_DEVICE=mob cypress run --record --browser chrome --headless",
     "cy:ci": "cypress run --env device=web --record --parallel --group 'CI Execution' --ci-build-id `date +%Y%m%d-%H%M%S` --browser chrome --headless",
     "cy:record:flag": "if [ -n \"$CYPRESS_RECORD_KEY\" ]; then echo '--record --parallel'; fi"
   },
