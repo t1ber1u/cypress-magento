@@ -21,7 +21,7 @@ jobs:
         run: npm install
       - name: Print environment variables
         run: |
-          echo "Device: $device"
+          echo "CYPRESS_DEVICE: $device"
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
@@ -32,5 +32,5 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          device: ${{ matrix.device }}
+          CYPRESS_DEVICE: ${{ matrix.device }}
           
