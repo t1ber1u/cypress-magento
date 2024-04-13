@@ -22,7 +22,7 @@ describe('Order Placement Process:', () => {
         });
 
 
-        it('successfully loads Magento home page and interacts with a product 2', () => {
+        it('should search and add an item to the cart successfully when [Add to Cart] button is clicked', () => {
 
             magento.searchForProductAndGetDetails('Wayfarer Messenger Bag').then(product => {
 
