@@ -1,3 +1,8 @@
+const dotenv = require('dotenv');
+
+// Load environment variables from .env file
+dotenv.config();
+
 function setViewPortsAndUserAgent(device) {
     if (device === 'mob' || device === 'mobile') {
         return {
@@ -17,7 +22,12 @@ function setViewPortsAndUserAgent(device) {
     throw new Error('device not supported - [please set device to mob or web]')
 }
 module.exports = (on, config) => {
-    const device = config.env.DEVICE 
+    // Inject .env variables into Cypress environment
+    Object.keys(process.env).forEach((key) => {
+        config.env[key] = process.env[key];
+    });
+
+    const device = config.env.DEVICE;
     console.log(`Device from environment:: ${device}`); // Should output 'mob' or 'web'
     const viewportConfig = setViewPortsAndUserAgent(device);
 
