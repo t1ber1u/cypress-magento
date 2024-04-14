@@ -75,6 +75,7 @@ describe('Order Placement Process:', () => {
 
                 // Ensure that the checkbox for billing and shipping address being the same is checked
                 cart.ensureCheckboxIsChecked('My billing and shipping address are the same');
+                
                 cart.placeOrder();
 
                 cart.expectMessage('Thank you for your purchase!')
