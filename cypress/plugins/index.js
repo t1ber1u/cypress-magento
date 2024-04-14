@@ -34,5 +34,6 @@ module.exports = (on, config) => {
     // Merge the viewportConfig with the existing config
     config = { ...config, ...viewportConfig };
 
+
     return config;
 };

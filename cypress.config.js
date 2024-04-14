@@ -22,7 +22,7 @@ module.exports = defineConfig({
           // Define your plugins here if needed
           return require('./cypress/plugins/index.js')(on, config);
         },
-        specPattern: 'cypress/e2e/magento*.cy.js', // Run only the Magento sample test
+        specPattern: 'cypress/e2e/add_multi*veri*.cy.js', // Run only the Magento sample test
         baseUrl: 'https://magento.softwaretestingboard.com',
         supportFile: false, // Disables the support file
       }

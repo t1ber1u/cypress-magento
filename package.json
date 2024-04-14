@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "cy:run:mob": "cypress run --browser=chrome --env device=mob",
-    "cy:run:web": "cypress run --env device=web",
     "cy:run:web:record": "CYPRESS_DEVICE=web cypress run --record --browser chrome --headless",
     "cy:run:mob:record": "CYPRESS_DEVICE=mob cypress run --record --browser chrome --headless",
     "cy:open:web": "CYPRESS_DEVICE=web cypress open --browser chrome",
