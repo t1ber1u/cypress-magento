@@ -32,4 +32,5 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_DEVICE: ${{ matrix.device }}
-          
+          ENCODED_USERNAME: ${{ secrets.ENCODED_USERNAME }}
+          ENCODED_PASSWORD: ${{ secrets.ENCODED_PASSWORD }}
