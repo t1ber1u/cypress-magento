@@ -189,6 +189,27 @@ export default class Cart {
             .should('match', /^\d+$/); // This regex checks for one or more digits, assuming order number consists only of digits
     }
 
+    updateItemQuantity(newQuantity) {
+        // Assume there's only one item in the cart for simplicity
+        cy.get('.item-qty.cart-item-qty')
+            .clear()                 // Clear the existing quantity
+            .type(newQuantity)       // Input the new quantity
+            .should('have.value', newQuantity); // Ensure the value is updated
+
+        // Click the update button (assuming it becomes visible after changing quantity)
+        cy.get('.update-cart-item').invoke('show').click(); // Show and click the update button
+
+        // Optionally, wait for some network activity or UI change indicating the update is processed
+        cy.wait(5000); // Example: Wait for the cart to update (not recommended to use fixed waits, ideally you should wait for a request to complete)
+
+        // Verify the total price recalculates correctly, this might need more specific implementation details
+        this.totalCartPrice().then(totalPrice => {
+
+            cy.log("New Cart Total Price:", totalPrice);
+        });
+    }
+
+
 
 
 }

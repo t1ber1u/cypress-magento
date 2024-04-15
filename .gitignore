@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+*.png
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -8,7 +9,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 cypress_
 README_.md
-cypress/screenshots/
+cypress/screenshots/*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
