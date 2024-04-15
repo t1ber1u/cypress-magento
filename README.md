@@ -5,13 +5,7 @@ Robust Cypress UI test suite for Magento e-commerce platform, ensuring seamless 
 
 This repository contains automated end-to-end tests for a Magento application, using Cypress. It integrates with GitHub Actions for continuous integration and Cypress Cloud for enhanced test monitoring and analytics.
 
-<h2>Cypress Results</h2>
-<table><tr><th>Result</th><th>Passed :white_check_mark:</th><th>Failed :x:</th><th>Pending :hand:</th><th>Skipped :leftwards_arrow_with_hook:</th><th>Duration :clock8:</th></tr><tr><td>Failing :red_circle:</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0.723s</td></tr></table>
-<a href="https://cloud.cypress.io/projects/7yg494/runs/22">View run in Cypress Cloud</a>
-
-<h2>Cypress Results</h2>
-<table><tr><th>Result</th><th>Passed :white_check_mark:</th><th>Failed :x:</th><th>Pending :hand:</th><th>Skipped :leftwards_arrow_with_hook:</th><th>Duration :clock8:</th></tr><tr><td>Failing :red_circle:</td><td>1</td><td>1</td><td>0</td><td>0</td><td>8.649s</td></tr></table>
-<a href="https://cloud.cypress.io/projects/7yg494/runs/22">View run in Cypress Cloud</a>
+[![magento](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/7yg494&style=flat&logo=cypress)](https://cloud.cypress.io/projects/7yg494/runs)
 
 ## Prerequisites
 
@@ -27,26 +21,31 @@ To set up this project locally, follow these steps:
    cd cypress-magento
 
 ## Install the required npm packages:
-```bash
-   npm install
+    ```bash
+    npm install
 
 ## On CI with GitHub Actions
 Tests are configured to run in CI with the following command, which includes recording:
-```bash
-npm run cy:ci 
+    ```bash
+    npm run cy:ci 
 
 ## This script handles test execution with recording enabled and is tailored for CI environments, utilizing parallel execution and unique build identifiers.
 
 ##  Cypress Cloud Integration
+
 Integration with Cypress Cloud has been implemented to enhance test management and monitoring. Cypress Cloud provides a dashboard for viewing test results and recordings. The project's Cypress Cloud dashboard can be accessed here. Note that a free account tier is used for this project.
 
 ## Development Dependencies
+
 cypress: Used for writing and running end-to-end tests.
 dotenv: Manages environment variables for the project.
 eslint: Lints JavaScript code, ensuring code quality and consistency.
 
 
 This guide includes all the necessary steps to get the environment set up, run tests, and also provides links and information about the integration with Cypress Cloud. This will be very helpful for anyone new to the project or looking to run tests locally or in a CI/CD pipeline.
+
+
+
 
 ## Some Scenarios to be be implemented
 1. Test Scenario: Add Single Item to Cart
